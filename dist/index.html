@@ -8,15 +8,16 @@
   </head>
   <body>
     <form autocomplete="off">
-      <div class="autocomplete" style="width: 300px">
+      <div class="autocomplete">
         <input
-          id="myInput"
-          type="text"
-          name="myCountry"
+          name="q"
+          id="q"
+          onKeyUp="showResults(this.value)"
           placeholder="Type in an acronym"
         />
       </div>
       <input type="submit" />
+      <div id="result"></div>
     </form>
     <script src="bundle.js"></script>
   </body>
