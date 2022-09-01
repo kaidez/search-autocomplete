@@ -9,15 +9,10 @@
   <body>
     <form autocomplete="off">
       <div class="autocomplete">
-        <input
-          name="q"
-          id="q"
-          onKeyUp="showResults(this.value)"
-          placeholder="Type in an acronym"
-        />
+        <input id="acronymSearchField" placeholder="Find an acronym..." />
       </div>
       <input type="submit" />
-      <div id="result"></div>
+      <div id="searchResults"></div>
     </form>
     <script src="bundle.js"></script>
   </body>
