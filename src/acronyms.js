@@ -1,5 +1,8 @@
 import { buildList } from './helpers';
 
+const searchField = document.querySelector('#acronymSearchField');
+const searchResults = document.querySelector('#acronymSearchResults');
+
 // Defining async function
 export async function getAcronyms() {
   const response = await fetch('./acronyms.json');
@@ -11,20 +14,32 @@ export async function getAcronyms() {
 
 function show(data) {
   const names = buildList(data, 'name');
-  console.log('names', names);
-  console.log('data', data);
 
-  const results = document.querySelector('#searchResults');
+  if (searchField == '') {
+    return [];
+  }
+
+  let regex = new RegExp(searchField);
+
+  return names.filter(function (term) {
+    if (term.match(regex)) {
+      return term;
+    }
+  });
+
   names.forEach((item) => {
     const newDiv = document.createElement('div');
     newDiv.textContent = item;
-    results.appendChild(newDiv);
+    searchResults.appendChild(newDiv);
   });
+
+  // console.log('names', names);
+  // console.log('data', data);
 }
 
-const searchField = document.querySelector('#acronymSearchField');
 searchField.addEventListener('keyup', keyUp);
 
-function keyUp() {
+export function keyUp() {
+  console.log(this.value);
   getAcronyms();
 }
