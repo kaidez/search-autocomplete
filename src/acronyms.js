@@ -1,50 +1,24 @@
 import { fetchData, buildList } from './helpers';
 
 export const searchField = document.querySelector('#acronymSearchField');
-export const searchResults = document.querySelector('#acronymSearchResults');
+const searchResults = document.querySelector('#acronymSearchResults');
 
-export async function acronymsInit(searchTerm) {
+export async function showAcronymSearchResults(searchTerm) {
   const acronyms = await fetchData('./acronyms.json');
-  const list = buildList(acronyms, 'name');
-  searchResults.innerHTML = '';
-  let pageList = '';
+  const acronymsList = buildList(acronyms, 'name');
+  let searchResultsList = '';
   let regex = new RegExp(searchTerm, 'i');
+
+  searchResults.innerHTML = '';
 
   if (searchTerm == '') {
     return [];
   }
 
-  return list.filter((term, idx) => {
+  return acronymsList.filter((term, idx) => {
     if (term.match(regex)) {
-      console.log('term is', term);
-      pageList += '<li>' + term + '</li>';
-      //return term;
+      searchResultsList += '<li>' + term + '</li>';
     }
-    searchResults.innerHTML = '<ul>' + pageList + '</ul>';
+    searchResults.innerHTML = '<ul>' + searchResultsList + '</ul>';
   });
-}
-
-// function autocompleteMatch(input) {
-//   if (input == '') {
-//     return [];
-//   }
-//   var regex = new RegExp(input, 'ig');
-
-//   return search_terms.filter((term) => {
-//     if (term.match(regex)) {
-//       console.log(term);
-//       return term;
-//     }
-//   });
-// }
-
-export function showResults(val) {
-  searchResults.innerHTML = '';
-  let list = '';
-  let terms = acronymsInit(val);
-  console.log('terms', terms);
-  for (var i = 0; i < terms.length; i++) {
-    list += '<li>' + terms[i] + '</li>';
-  }
-  searchResults.innerHTML = '<ul>' + list + '</ul>';
 }

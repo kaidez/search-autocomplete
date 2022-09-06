@@ -1,5 +1,5 @@
-import { searchField, acronymsInit, showResults } from './acronyms';
+import { searchField, showAcronymSearchResults } from './acronyms';
 
 searchField.addEventListener('keyup', () => {
-  acronymsInit(searchField.value);
+  showAcronymSearchResults(searchField.value);
 });
