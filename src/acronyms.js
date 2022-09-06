@@ -6,7 +6,7 @@ const searchResults = document.querySelector('#acronymSearchResults');
 export async function showAcronymSearchResults(searchTerm) {
   const acronyms = await fetchData('./acronyms.json');
   const acronymsList = buildList(acronyms, 'name');
-  let searchResultsList = '';
+  let searchResultsListItem = '';
   let regex = new RegExp(searchTerm, 'i');
 
   searchResults.innerHTML = '';
@@ -17,7 +17,7 @@ export async function showAcronymSearchResults(searchTerm) {
 
   return acronymsList.filter((term, idx) => {
     if (term.match(regex)) {
-      searchResultsList += '<li>' + term + '</li>';
+      searchResultsListItem += '<li>' + term + '</li>';
     }
     searchResults.innerHTML = '<ul>' + searchResultsList + '</ul>';
   });
