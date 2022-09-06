@@ -11,10 +11,9 @@ function autocompleteMatch(input) {
   }
   var regex = new RegExp(input, 'ig');
   var foo = searchField.value;
-  console.log(foo.match(regex));
-  console.log('regex', regex);
   return search_terms.filter((term) => {
     if (term.match(regex)) {
+      console.log(term);
       return term;
     }
   });
