@@ -15,7 +15,7 @@ export async function showAcronymSearchResults(searchTerm) {
     return [];
   }
 
-  return acronymsList.filter((term, idx) => {
+  return acronymsList.filter((term) => {
     if (term.match(regex)) {
       searchResultsList += '<li>' + term + '</li>';
     }
