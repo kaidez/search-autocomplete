@@ -7,8 +7,17 @@ export async function fetchData(url) {
   return data;
 }
 
-// Loop over an array of objects, find a property of one of the
-// objects, then place all those properties in a standard JS array
-// Ex: buildList([{'age': 21}, {'age': 50}], 'age') returns [21, 50]
-export const buildList = (fetchedObject, objectProperty) =>
-  fetchedObject.map((item) => item[objectProperty]);
+// Loop over an array of objects and if the 'objectProperty' is in that
+// object, place it in a standard JS array
+// Example:
+// buildList([{'age': 21}, {'name': 'joe'}, {'age': 50}])...
+// ...returns [21, 50]
+export const buildList = (fetchedObject, objectProperty) => {
+  let arr = [];
+  fetchedObject.map((obj) => {
+    if (obj[objectProperty] !== undefined) {
+      arr.push(obj[objectProperty]);
+    }
+  });
+  return arr;
+};
