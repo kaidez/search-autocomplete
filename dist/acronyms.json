@@ -3,10 +3,12 @@
     "age": 21
   },
   {
-    "name": "MHTK"
+    "name": "MHTK",
+    "age": 21
   },
   {
-    "name": "MIM"
+    "name": "MIM",
+    "city": "New York City"
   },
   {
     "age": 50
