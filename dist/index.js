@@ -5,6 +5,22 @@ const searchResults = document.querySelector('#acronymSearchResults');
 
 var search_terms = ['Steven', 'Sean', 'Stefan', 'Sam', 'Nathan'];
 
+// Defining async function
+async function getAcronyms(url) {
+  const response = await fetch(url);
+
+  // Storing data in form of JSON
+  const data = await response.json();
+  return data;
+}
+
+async function renderAcronyms() {
+  const acronyms = await getAcronyms('./acronyms.json');
+  console.log('acronyms', acronyms);
+}
+
+renderAcronyms();
+
 function autocompleteMatch(input) {
   if (input == '') {
     return [];
