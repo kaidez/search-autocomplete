@@ -1,1 +1,3 @@
-import { getAcronyms } from './acronyms';
+import { acronymsInit } from './acronyms';
+
+acronymsInit();
