@@ -1,19 +1,10 @@
-import { buildList } from './helpers';
+import { fetchData, buildList } from './helpers';
 
 const searchField = document.querySelector('#acronymSearchField');
 const searchResults = document.querySelector('#acronymSearchResults');
 
-// Defining async function
-async function getAcronyms(url) {
-  const response = await fetch(url);
-
-  // Storing data in form of JSON
-  const data = await response.json();
-  return data;
-}
-
 export async function acronymsInit() {
-  const acronyms = await getAcronyms('./acronyms.json');
+  const acronyms = await fetchData('./acronyms.json');
   const list = buildList(acronyms, 'name');
   console.log('list', list);
 }
