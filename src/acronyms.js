@@ -36,10 +36,11 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 exports.__esModule = true;
-exports.showAcronymSearchResults = exports.searchResults = exports.searchField = void 0;
+exports.showAcronymSearchResults = exports.clearBtn = exports.searchResults = exports.searchField = void 0;
 var helpers_1 = require("./helpers");
 exports.searchField = document.querySelector('#searchField');
 exports.searchResults = document.querySelector('#searchResults');
+exports.clearBtn = document.querySelector('#clear');
 function showAcronymSearchResults(searchTerm) {
     return __awaiter(this, void 0, void 0, function () {
         var acronyms, acronymsNameList, searchResultsList, regex;
