@@ -42,20 +42,20 @@ exports.searchField = document.querySelector('#searchField');
 exports.searchResults = document.querySelector('#searchResults');
 function showAcronymSearchResults(searchTerm) {
     return __awaiter(this, void 0, void 0, function () {
-        var acronyms, acronymsList, searchResultsList, regex;
+        var acronyms, acronymsNameList, searchResultsList, regex;
         return __generator(this, function (_a) {
             switch (_a.label) {
                 case 0: return [4 /*yield*/, (0, helpers_1.fetchData)('./acronyms.json')];
                 case 1:
                     acronyms = _a.sent();
-                    acronymsList = (0, helpers_1.buildList)(acronyms, 'name');
+                    acronymsNameList = (0, helpers_1.buildList)(acronyms, 'name');
                     searchResultsList = '';
                     regex = new RegExp(searchTerm, 'i');
                     exports.searchResults.innerHTML = '';
                     if (searchTerm == '') {
                         return [2 /*return*/, []];
                     }
-                    return [2 /*return*/, acronymsList.filter(function (term) {
+                    return [2 /*return*/, acronymsNameList.filter(function (term) {
                             if (term.match(regex)) {
                                 searchResultsList += '<li>' + term + '</li>';
                             }

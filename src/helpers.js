@@ -56,14 +56,14 @@ function fetchData(url) {
     });
 }
 exports.fetchData = fetchData;
-// Loop over an array of objects and if the 'objectProperty' is in that
+// Loop over an array of objects and if the 'objectProperty' is in an
 // object, place it in a standard JS array
 // Example:
-// buildList([{'age': 21}, {'name': 'joe'}, {'age': 50}], 'name')...
-// ...returns ['joe']
-var buildList = function (fetchedObject, objectProperty) {
+// buildList([{'age': 21}, {'name': 'joe'}, {'age': 50}], 'name') will
+// return ['joe']
+var buildList = function (obj, objectProperty) {
     var arr = [];
-    fetchedObject.map(function (objectArray) {
+    obj.map(function (objectArray) {
         if (objectArray[objectProperty] !== undefined) {
             arr.push(objectArray[objectProperty]);
         }

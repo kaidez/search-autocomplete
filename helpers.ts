@@ -7,14 +7,14 @@ export async function fetchData(url: string) {
   return data;
 }
 
-// Loop over an array of objects and if the 'objectProperty' is in that
+// Loop over an array of objects and if the 'objectProperty' is in an
 // object, place it in a standard JS array
 // Example:
-// buildList([{'age': 21}, {'name': 'joe'}, {'age': 50}], 'name')...
-// ...returns ['joe']
-export const buildList = (fetchedObject: object[], objectProperty: string) => {
+// buildList([{'age': 21}, {'name': 'joe'}, {'age': 50}], 'name') will
+// return ['joe']
+export const buildList = (obj: object[], objectProperty: string) => {
   let arr: string[] = [];
-  fetchedObject.map((objectArray: object[]) => {
+  obj.map((objectArray: object[]) => {
     if (objectArray[objectProperty] !== undefined) {
       arr.push(objectArray[objectProperty]);
     }
