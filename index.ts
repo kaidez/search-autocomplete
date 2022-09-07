@@ -1,4 +1,9 @@
-import { searchField, clearBtn, showAcronymSearchResults } from './acronyms';
+import {
+  searchField,
+  searchResults,
+  clearBtn,
+  showAcronymSearchResults,
+} from './acronyms';
 
 searchField.addEventListener('keyup', () => {
   showAcronymSearchResults(searchField.value);
@@ -6,4 +11,5 @@ searchField.addEventListener('keyup', () => {
 
 clearBtn.addEventListener('click', () => {
   searchField.value = '';
+  searchResults.innerHTML = '';
 });

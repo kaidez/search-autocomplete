@@ -6,4 +6,5 @@ acronyms_1.searchField.addEventListener('keyup', function () {
 });
 acronyms_1.clearBtn.addEventListener('click', function () {
     acronyms_1.searchField.value = '';
+    acronyms_1.searchResults.innerHTML = '';
 });
