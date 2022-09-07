@@ -52,7 +52,21 @@
       }
 
       .clearButton {
-        font-size: 80px;
+        width: 80px;
+        height: 61px;
+        position: relative;
+        top: -92px;
+        right: -268px;
+        z-index: 10000;
+
+        font-size: 50px;
+        cursor: pointer;
+      }
+
+      .form {
+        margin: 0 auto;
+        width: 100%;
+        max-width: 320px;
       }
     </style>
     <script src="bundle.js" defer></script>
@@ -60,14 +74,17 @@
   <body>
     <div class="container">
       <h1>Tōjigo</h1>
-      <form autocomplete="off">
-        <input
-          id="searchField"
-          class="acronymInput"
-          placeholder="Find an acronym..."
-        />
-      </form>
-      <div class="clearButton">&times;</div>
+
+      <div class="form">
+        <form autocomplete="off">
+          <input
+            id="searchField"
+            class="acronymInput"
+            placeholder="Find an acronym..."
+          />
+        </form>
+        <div id="clear" class="clearButton">&times;</div>
+      </div>
       <div id="searchResults" class="searchResults"></div>
     </div>
   </body>
