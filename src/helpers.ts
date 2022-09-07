@@ -14,9 +14,9 @@ export async function fetchData(url: string) {
 // ...returns ['joe']
 export const buildList = (fetchedObject: object[], objectProperty: string) => {
   let arr: string[] = [];
-  fetchedObject.map((objArray: object[]) => {
-    if (objArray[objectProperty] !== undefined) {
-      arr.push(objArray[objectProperty]);
+  fetchedObject.map((objectArray: object[]) => {
+    if (objectArray[objectProperty] !== undefined) {
+      arr.push(objectArray[objectProperty]);
     }
   });
   return arr;

@@ -63,9 +63,9 @@ exports.fetchData = fetchData;
 // ...returns ['joe']
 var buildList = function (fetchedObject, objectProperty) {
     var arr = [];
-    fetchedObject.map(function (objArray) {
-        if (objArray[objectProperty] !== undefined) {
-            arr.push(objArray[objectProperty]);
+    fetchedObject.map(function (objectArray) {
+        if (objectArray[objectProperty] !== undefined) {
+            arr.push(objectArray[objectProperty]);
         }
     });
     return arr;
