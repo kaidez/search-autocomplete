@@ -1,7 +1,11 @@
 import { fetchData, buildList } from './helpers';
 
-export const searchField = document.querySelector('#searchField');
-export const searchResults = document.querySelector('#searchResults');
+export const searchField = document.querySelector(
+  '#searchField'
+) as HTMLInputElement;
+export const searchResults = document.querySelector(
+  '#searchResults'
+) as HTMLElement;
 
 export async function showAcronymSearchResults(searchTerm: string) {
   const acronyms = await fetchData('./acronyms.json');
