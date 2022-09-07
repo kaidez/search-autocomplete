@@ -4,16 +4,64 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Get a BCBS Acronym</title>
+    <title>Tōjigo - Find a BCBS Acronym</title>
+    <style>
+      .container {
+        text-align: center;
+        width: auto;
+        border: 1px solid red;
+      }
+
+      .acronymInput {
+        margin-bottom: 30px;
+        max-width: 400px;
+        width: auto;
+      }
+
+      h1 {
+        color: #005172;
+      }
+
+      input {
+        height: 40px;
+        font-size: 20px;
+        border-radius: 10px;
+        padding: 10px;
+      }
+
+      .acronymSearchResults li {
+        list-style-type: none;
+        text-align: left;
+        padding-left: 0;
+        border: 1px solid #005172;
+        margin-bottom: 30px;
+        padding: 40px;
+      }
+
+      .acronymSearchResults {
+        width: 300px;
+        margin: 0 auto;
+      }
+
+      .acronymSearchResults ul {
+        list-style-type: none;
+        text-align: left;
+        padding-left: 0;
+      }
+    </style>
   </head>
   <body>
-    <form autocomplete="off">
-      <div class="autocomplete">
-        <input id="acronymSearchField" placeholder="Find an acronym..." />
-      </div>
-      <input type="submit" />
-      <div id="acronymSearchResults"></div>
-    </form>
-    <script src="bundle.js"></script>
+    <div class="container">
+      <h1>Tōjigo</h1>
+      <form autocomplete="off">
+        <input
+          id="acronymSearchField"
+          class="acronymInput"
+          placeholder="Find an acronym..."
+        />
+      </form>
+      <div id="acronymSearchResults" class="acronymSearchResults"></div>
+      <script src="bundle.js"></script>
+    </div>
   </body>
 </html>
