@@ -7,11 +7,10 @@ export async function fetchData(url: string) {
   return data;
 }
 
-// Loop over an array of objects and if the 'objectProperty' is in an
-// object, place it in a standard JS array
-// Example:
-// buildList([{'age': 21}, {'name': 'joe'}, {'age': 50}], 'name') will
-// return ['joe']
+// Loop over an array of objects and if the 'objectProperty' is in one
+// of those objects, place it in a standard JS array
+
+// Ex: buildList([{'age': 21}, {'name': 'joe'}], 'name') returns ['joe']
 export const buildList = (obj: object[], objectProperty: string) => {
   let arr: string[] = [];
   obj.map((objectArray: object[]) => {

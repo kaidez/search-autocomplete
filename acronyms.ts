@@ -13,7 +13,7 @@ export async function showAcronymSearchResults(searchTerm: string) {
   let searchResultsList: string = '';
   let regex = new RegExp(searchTerm, 'i');
 
-  searchResults!.innerHTML = '';
+  searchResults.innerHTML = '';
 
   if (searchTerm == '') {
     return [];
@@ -23,6 +23,6 @@ export async function showAcronymSearchResults(searchTerm: string) {
     if (term.match(regex)) {
       searchResultsList += '<li>' + term + '</li>';
     }
-    searchResults!.innerHTML = '<ul>' + searchResultsList + '</ul>';
+    searchResults.innerHTML = '<ul>' + searchResultsList + '</ul>';
   });
 }
