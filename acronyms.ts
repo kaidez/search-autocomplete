@@ -22,8 +22,19 @@ export async function showAcronymSearchResults(searchTerm: string) {
 
   return acronymsNameList.filter((term: string) => {
     if (term.match(regex)) {
-      searchResultsList += '<li>' + term + '</li>';
+      console.log('term', term);
+      console.log(acronyms);
+      const matchedEl = acronyms.find((key) => term === key['name']);
+      console.log('matchedEl', matchedEl);
+      searchResultsList += '<li>' + term + ' ' + matchedEl.short_desc + '</li>';
     }
     searchResults.innerHTML = '<ul>' + searchResultsList + '</ul>';
   });
+
+  // return acronymsNameList.filter((term: string) => {
+  //   if (term.match(regex)) {
+  //     searchResultsList += '<li>' + term + '</li>';
+  //   }
+  //   searchResults.innerHTML = '<ul>' + searchResultsList + '</ul>';
+  // });
 }
