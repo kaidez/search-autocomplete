@@ -5,7 +5,7 @@ export const searchField = document.querySelector(
 ) as HTMLInputElement;
 export const searchResults = document.querySelector(
   '#searchResults'
-) as HTMLElement;
+) as HTMLLIElement;
 export const clearBtn = document.querySelector('#clear') as HTMLDivElement;
 
 export async function showAcronymSearchResults(searchTerm: string) {
