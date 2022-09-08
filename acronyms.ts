@@ -8,33 +8,34 @@ export const searchResults = document.querySelector(
 ) as HTMLLIElement;
 export const clearBtn = document.querySelector('#clear') as HTMLDivElement;
 
-export async function showAcronymSearchResults(searchTerm: string) {
-  const acronyms = await fetchData('./acronyms.json');
-  const acronymsNameList = buildList(acronyms, 'name');
+export async function showAcronymSearchResults(enteredSearchTerm: string) {
+  const acronymsFullList = await fetchData('./acronyms.json');
+  const acronymsNameList = buildList(acronymsFullList, 'name');
   let searchResultsList: string = '';
-  let regex = new RegExp(searchTerm, 'i');
+  let nameToMatch = new RegExp(enteredSearchTerm, 'i');
 
   searchResults.innerHTML = '';
 
-  if (searchTerm == '') {
+  if (enteredSearchTerm == '') {
     return [];
   }
 
-  return acronymsNameList.filter((term: string) => {
-    if (term.match(regex)) {
-      console.log('term', term);
-      console.log(acronyms);
-      const matchedEl = acronyms.find((key) => term === key['name']);
-      console.log('matchedEl', matchedEl);
-      searchResultsList += '<li>' + term + ' ' + matchedEl.short_desc + '</li>';
-    }
-    searchResults.innerHTML = '<ul>' + searchResultsList + '</ul>';
-  });
+  return acronymsNameList.filter((nameTerm: string) => {
+    if (nameTerm.match(nameToMatch)) {
+      const matchedObject = acronymsFullList.find(
+        (key: string) => nameTerm === key['name']
+      );
 
-  // return acronymsNameList.filter((term: string) => {
-  //   if (term.match(regex)) {
-  //     searchResultsList += '<li>' + term + '</li>';
-  //   }
-  //   searchResults.innerHTML = '<ul>' + searchResultsList + '</ul>';
-  // });
+      searchResultsList +=
+        '<article>' +
+        '<div>' +
+        matchedObject.name +
+        '</div>' +
+        '<div><i>' +
+        matchedObject.short_desc +
+        '</i></div>' +
+        '</article>';
+    }
+    searchResults.innerHTML = '<section>' + searchResultsList + '</section>';
+  });
 }

@@ -41,30 +41,35 @@ var helpers_1 = require("./helpers");
 exports.searchField = document.querySelector('#searchField');
 exports.searchResults = document.querySelector('#searchResults');
 exports.clearBtn = document.querySelector('#clear');
-function showAcronymSearchResults(searchTerm) {
+function showAcronymSearchResults(enteredSearchTerm) {
     return __awaiter(this, void 0, void 0, function () {
-        var acronyms, acronymsNameList, searchResultsList, regex;
+        var acronymsFullList, acronymsNameList, searchResultsList, nameToMatch;
         return __generator(this, function (_a) {
             switch (_a.label) {
                 case 0: return [4 /*yield*/, (0, helpers_1.fetchData)('./acronyms.json')];
                 case 1:
-                    acronyms = _a.sent();
-                    acronymsNameList = (0, helpers_1.buildList)(acronyms, 'name');
+                    acronymsFullList = _a.sent();
+                    acronymsNameList = (0, helpers_1.buildList)(acronymsFullList, 'name');
                     searchResultsList = '';
-                    regex = new RegExp(searchTerm, 'i');
+                    nameToMatch = new RegExp(enteredSearchTerm, 'i');
                     exports.searchResults.innerHTML = '';
-                    if (searchTerm == '') {
+                    if (enteredSearchTerm == '') {
                         return [2 /*return*/, []];
                     }
-                    return [2 /*return*/, acronymsNameList.filter(function (term) {
-                            if (term.match(regex)) {
-                                console.log('term', term);
-                                console.log(acronyms);
-                                var matchedEl = acronyms.find(function (key) { return term === key['name']; });
-                                console.log('matchedEl', matchedEl);
-                                searchResultsList += '<li>' + term + ' ' + matchedEl.short_desc + '</li>';
+                    return [2 /*return*/, acronymsNameList.filter(function (nameTerm) {
+                            if (nameTerm.match(nameToMatch)) {
+                                var matchedObject = acronymsFullList.find(function (key) { return nameTerm === key['name']; });
+                                searchResultsList +=
+                                    '<article>' +
+                                        '<div>' +
+                                        matchedObject.name +
+                                        '</div>' +
+                                        '<div><i>' +
+                                        matchedObject.short_desc +
+                                        '</i></div>' +
+                                        '</article>';
                             }
-                            exports.searchResults.innerHTML = '<ul>' + searchResultsList + '</ul>';
+                            exports.searchResults.innerHTML = '<section>' + searchResultsList + '</section>';
                         })];
             }
         });
