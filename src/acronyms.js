@@ -39,6 +39,7 @@ exports.__esModule = true;
 exports.showAcronymSearchResults = exports.searchResults = void 0;
 var helpers_1 = require("./helpers");
 exports.searchResults = document.querySelector('#searchResults');
+var searchTermInObject = 'name';
 function showAcronymSearchResults(enteredSearchTerm) {
     return __awaiter(this, void 0, void 0, function () {
         var acronymsFullList, acronymsNameList, searchResultsList, nameToMatch;
@@ -47,7 +48,7 @@ function showAcronymSearchResults(enteredSearchTerm) {
                 case 0: return [4 /*yield*/, (0, helpers_1.fetchData)('./acronyms.json')];
                 case 1:
                     acronymsFullList = _a.sent();
-                    acronymsNameList = (0, helpers_1.buildList)(acronymsFullList, 'name');
+                    acronymsNameList = (0, helpers_1.buildList)(acronymsFullList, searchTermInObject);
                     searchResultsList = '';
                     nameToMatch = new RegExp(enteredSearchTerm, 'i');
                     exports.searchResults.innerHTML = '';
@@ -56,7 +57,7 @@ function showAcronymSearchResults(enteredSearchTerm) {
                     }
                     return [2 /*return*/, acronymsNameList.filter(function (nameTerm) {
                             if (nameTerm.match(nameToMatch)) {
-                                var matchedObject = acronymsFullList.find(function (key) { return nameTerm === key['name']; });
+                                var matchedObject = acronymsFullList.find(function (key) { return nameTerm === key[searchTermInObject]; });
                                 searchResultsList +=
                                     '<article>' +
                                         '<div>' +

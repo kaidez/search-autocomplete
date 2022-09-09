@@ -4,9 +4,11 @@ export const searchResults = document.querySelector(
   '#searchResults'
 ) as HTMLDivElement;
 
+const searchTermInObject = 'name';
+
 export async function showAcronymSearchResults(enteredSearchTerm: string) {
   const acronymsFullList = await fetchData('./acronyms.json');
-  const acronymsNameList = buildList(acronymsFullList, 'name');
+  const acronymsNameList = buildList(acronymsFullList, searchTermInObject);
 
   let searchResultsList: string = '';
   let nameToMatch = new RegExp(enteredSearchTerm, 'i');
@@ -20,7 +22,7 @@ export async function showAcronymSearchResults(enteredSearchTerm: string) {
   return acronymsNameList.filter((nameTerm: string) => {
     if (nameTerm.match(nameToMatch)) {
       const matchedObject = acronymsFullList.find(
-        (key: string) => nameTerm === key['name']
+        (key: string) => nameTerm === key[searchTermInObject]
       );
 
       searchResultsList +=
