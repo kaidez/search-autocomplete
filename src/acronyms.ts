@@ -27,7 +27,7 @@ export async function showAcronymSearchResults(enteredSearchTerm: string) {
 
       searchResultsList +=
         '<article>' +
-        "<div class='resultCard'><h1>" +
+        '<div class="resultCard"><h1>' +
         matchedObject.name +
         '</h1></div>' +
         '<div>' +

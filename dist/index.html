@@ -6,6 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tojigo - Find a BCBS Acronym</title>
     <style>
+      .fade-in-image {
+        animation: fadeIn 1s;
+      }
+
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+
+      .clearButtonOpacity {
+        opacity: 0;
+      }
+
+      .clearButton {
+        width: 40px;
+        height: 40px;
+        position: relative;
+        top: -51px;
+        right: -275px;
+        font-size: 29px;
+        cursor: pointer;
+        color: #ffffff;
+        background-color: #318fb4;
+        border-radius: 50%;
+      }
+
       .container {
         text-align: center;
         width: auto;
@@ -86,19 +116,6 @@
         color: transparent;
       }
 
-      .clearButton {
-        width: 40px;
-        height: 40px;
-        position: relative;
-        top: -51px;
-        right: -275px;
-        font-size: 29px;
-        cursor: pointer;
-        color: #ffffff;
-        background-color: #318fb4;
-        border-radius: 50%;
-      }
-
       .resultCard h1 {
         margin: 0;
         font-size: 30px;
@@ -120,7 +137,9 @@
             placeholder="Enter an acronym..."
           />
         </form>
-        <div id="clearSearchButton" class="clearButton">&times;</div>
+        <div id="clearSearchButton" class="clearButton clearButtonOpacity">
+          &times;
+        </div>
       </div>
 
       <section id="searchResults"></section>
