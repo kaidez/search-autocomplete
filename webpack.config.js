@@ -14,11 +14,15 @@ module.exports = {
     compress: true,
     port: 9000,
   },
+  resolve: {
+    // Add `.ts` and `.tsx` as a resolvable extension.
+    extensions: ['.ts', '.js'],
+  },
   module: {
     rules: [
       {
-        loader: 'babel-loader',
-        test: '/.(js|jsx)$/',
+        loader: 'ts-loader',
+        test: '/.(js|ts)$/',
         exclude: /node_modules/,
       },
     ],
