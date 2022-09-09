@@ -35,6 +35,6 @@ export async function showAcronymSearchResults(enteredSearchTerm: string) {
         '</i></div>' +
         '</article>';
     }
-    searchResults.innerHTML = '<section>' + searchResultsList + '</section>';
+    searchResults.innerHTML = searchResultsList;
   });
 }
