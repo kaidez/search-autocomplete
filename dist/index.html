@@ -11,13 +11,6 @@
         width: auto;
       }
 
-      html,
-      body,
-      .container {
-        height: 100%;
-        margin: 0;
-      }
-
       .container {
         display: flex;
         flex-direction: column;
@@ -26,14 +19,8 @@
       body {
         margin: 0;
         display: flex;
-        min-height: 100vh;
         flex-direction: column;
-      }
-
-      footer {
-        background-color: #00709c;
-        color: #ffffff;
-        height: 100px;
+        margin-bottom: 100px;
       }
 
       /* Flex container */
@@ -66,6 +53,14 @@
       }
 
       footer {
+        height: 100px;
+        position: fixed;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        margin-bottom: 0px;
+        background-color: #00709c;
+        color: #ffffff;
         text-align: center;
       }
 
@@ -76,7 +71,7 @@
       }
 
       .acronymInput {
-        margin-bottom: 30px;
+        margin-bottom: 0 auto 30px;
         max-width: 400px;
         width: 100%;
 
@@ -95,14 +90,10 @@
         width: 80px;
         height: 61px;
         position: relative;
-        top: -92px;
+        top: -64px;
         right: -268px;
         font-size: 50px;
         cursor: pointer;
-      }
-
-      #searchResults {
-        height: 100%;
       }
     </style>
     <script src="bundle.js" defer></script>
