@@ -15,7 +15,7 @@ module.exports = {
     port: 9000,
   },
   resolve: {
-    // Add `.ts` and `.tsx` as a resolvable extension.
+    // Add `.ts` as a resolvable extension.
     extensions: ['.ts', '.js'],
   },
   module: {
