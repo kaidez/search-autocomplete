@@ -2,7 +2,7 @@ import { fetchData, buildList } from './helpers';
 
 export const searchResults = document.querySelector(
   '#searchResults'
-) as HTMLDivElement;
+) as HTMLLIElement;
 
 const searchTermInObject = 'name';
 

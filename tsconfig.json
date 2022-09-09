@@ -2,6 +2,6 @@
   "compilerOptions": {
     "suppressImplicitAnyIndexErrors": true,
     "strictNullChecks": true,
-    "outDir": "src"
+    "outDir": "out"
   }
 }

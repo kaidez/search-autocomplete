@@ -2,7 +2,7 @@
   "name": "search-autocomplete",
   "version": "1.0.0",
   "description": "",
-  "main": "src/index.js",
+  "main": "out/index.js",
   "scripts": {
     "start": "webpack serve --open",
     "build": "webpack watch",
