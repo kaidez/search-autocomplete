@@ -18,6 +18,11 @@
     "city": "New York City"
   },
   {
+    "name": "MIM",
+    "short_desc": "My Insurance Manager",
+    "city": "New York City"
+  },
+  {
     "age": 50
   }
 ]
