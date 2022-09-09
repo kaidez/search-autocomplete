@@ -18,9 +18,24 @@
     "city": "New York City"
   },
   {
-    "name": "MIM",
-    "short_desc": "My Insurance Manager",
-    "city": "New York City"
+    "name": "JAD",
+    "short_desc": "Joint Application Design"
+  },
+  {
+    "name": "EQE",
+    "short_desc": "Enterprise Quality Engineering"
+  },
+  {
+    "name": "LEDS",
+    "short_desc": "Leveraged Enterprise Data Services"
+  },
+  {
+    "name": "ADAPT",
+    "short_desc": "Automated Development And Performance Testing"
+  },
+  {
+    "name": "WMS",
+    "short_desc": "Work Management Systems"
   },
   {
     "age": 50
