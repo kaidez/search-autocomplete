@@ -5,8 +5,10 @@ export const searchField = document.querySelector(
 ) as HTMLInputElement;
 export const searchResults = document.querySelector(
   '#searchResults'
-) as HTMLLIElement;
-export const clearBtn = document.querySelector('#clear') as HTMLDivElement;
+) as HTMLDivElement;
+export const clearSearchButton = document.querySelector(
+  '#clearSearchButton'
+) as HTMLDivElement;
 
 export async function showAcronymSearchResults(enteredSearchTerm: string) {
   const acronymsFullList = await fetchData('./acronyms.json');
