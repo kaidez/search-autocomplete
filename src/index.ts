@@ -10,10 +10,10 @@ export const clearSearchButton = document.querySelector(
 
 function showHideClearSearchButton() {
   if (searchResults.childNodes.length >= 1) {
-    clearSearchButton.classList.add('fade-in-image');
+    clearSearchButton.classList.add('clearButtonFadeIn');
     clearSearchButton.classList.remove('clearButtonOpacity');
   } else {
-    clearSearchButton.classList.remove('fade-in-image');
+    clearSearchButton.classList.remove('clearButtonFadeIn');
     clearSearchButton.classList.add('clearButtonOpacity');
   }
 }
@@ -23,22 +23,12 @@ searchField.addEventListener('keyup', () => {
 
   setTimeout(() => {
     showHideClearSearchButton();
-  }, 300);
+  }, 100);
 });
-
-// searchField.addEventListener('focus', () => {
-//   clearSearchButton.classList.add('fade-in-image');
-//   clearSearchButton.classList.remove('clearButtonOpacity');
-// });
-
-// searchField.addEventListener('blur', () => {
-//   clearSearchButton.classList.remove('fade-in-image');
-//   clearSearchButton.classList.add('clearButtonOpacity');
-// });
 
 clearSearchButton.addEventListener('click', () => {
   searchField.value = '';
   searchResults.innerHTML = '';
-  clearSearchButton.classList.remove('fade-in-image');
+  clearSearchButton.classList.remove('clearButtonFadeIn');
   clearSearchButton.classList.add('clearButtonOpacity');
 });
