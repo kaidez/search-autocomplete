@@ -9,6 +9,21 @@
       .container {
         text-align: center;
         width: auto;
+        /* display: flex;
+        flex-direction: column;
+        flex: 1; */
+      }
+
+      body {
+        margin: 0;
+        display: flex;
+        min-height: 100vh;
+        flex-direction: column;
+      }
+      footer {
+        background-color: #00709c;
+        color: #ffffff;
+        height: 100px;
       }
 
       /* Flex container */
@@ -29,7 +44,7 @@
         padding: 10px;
         text-align: left;
         font-size: 30px;
-        border: 1px solid #005172;
+        border: 1px solid #00709c;
         flex-wrap: wrap;
       }
 
@@ -68,6 +83,17 @@
         font-size: 50px;
         cursor: pointer;
       }
+
+      #searchResults {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        flex: 1;
+
+        display: flex;
+        min-height: 100vh;
+        flex-direction: column;
+      }
     </style>
     <script src="bundle.js" defer></script>
   </head>
@@ -80,13 +106,15 @@
           <input
             id="searchField"
             class="acronymInput"
-            placeholder="Find an acronym..."
+            placeholder="Enter an acronym..."
           />
         </form>
         <div id="clearSearchButton" class="clearButton">&times;</div>
       </div>
 
       <div id="searchResults"></div>
+      <footer>BCBS</footer>
     </div>
+    <!-- .container -->
   </body>
 </html>
