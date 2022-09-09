@@ -1,18 +1,13 @@
 import { fetchData, buildList } from './helpers';
 
-export const searchField = document.querySelector(
-  '#searchField'
-) as HTMLInputElement;
 export const searchResults = document.querySelector(
   '#searchResults'
-) as HTMLDivElement;
-export const clearSearchButton = document.querySelector(
-  '#clearSearchButton'
 ) as HTMLDivElement;
 
 export async function showAcronymSearchResults(enteredSearchTerm: string) {
   const acronymsFullList = await fetchData('./acronyms.json');
   const acronymsNameList = buildList(acronymsFullList, 'name');
+
   let searchResultsList: string = '';
   let nameToMatch = new RegExp(enteredSearchTerm, 'i');
 
