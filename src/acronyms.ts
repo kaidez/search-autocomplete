@@ -27,12 +27,12 @@ export async function showAcronymSearchResults(enteredSearchTerm: string) {
 
       searchResultsList +=
         '<article>' +
-        '<div>' +
+        "<div class='resultCard'><h1>" +
         matchedObject.name +
-        '</div>' +
-        '<div><i>' +
+        '</h1></div>' +
+        '<div>' +
         matchedObject.short_desc +
-        '</i></div>' +
+        '</div>' +
         '</article>';
     }
     searchResults.innerHTML = searchResultsList;
