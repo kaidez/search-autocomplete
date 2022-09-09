@@ -9,9 +9,18 @@
       .container {
         text-align: center;
         width: auto;
-        /* display: flex;
+      }
+
+      html,
+      body,
+      .container {
+        height: 100%;
+        margin: 0;
+      }
+
+      .container {
+        display: flex;
         flex-direction: column;
-        flex: 1; */
       }
 
       body {
@@ -20,6 +29,7 @@
         min-height: 100vh;
         flex-direction: column;
       }
+
       footer {
         background-color: #00709c;
         color: #ffffff;
@@ -35,19 +45,19 @@
         column-gap: 10px;
         flex-wrap: wrap;
         flex-direction: row;
+
+        flex: 0 0 240px;
       }
 
       /* Flex item */
       article {
         width: 400px;
         height: 100px;
-        margin: 0 auto 30px;
+        margin-bottom: 10px;
         padding: 10px;
         text-align: left;
         font-size: 30px;
         border: 1px solid #00709c;
-        flex-wrap: wrap;
-        column-gap: 10px;
       }
 
       h1 {
@@ -87,14 +97,7 @@
       }
 
       #searchResults {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        flex: 1;
-
-        display: flex;
-        min-height: 100vh;
-        flex-direction: column;
+        height: 100%;
       }
     </style>
     <script src="bundle.js" defer></script>
