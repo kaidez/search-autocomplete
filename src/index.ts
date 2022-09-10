@@ -1,8 +1,6 @@
 import { searchResults, showAcronymSearchResults } from './acronyms';
 
-export const searchField = document.querySelector(
-  '#searchField'
-) as HTMLInputElement;
+const searchField = document.querySelector('#searchField') as HTMLInputElement;
 
 export const clearSearchButton = document.querySelector(
   '#clearSearchButton'
@@ -20,10 +18,13 @@ function showHideClearSearchButton() {
 
 searchField.addEventListener('keyup', () => {
   showAcronymSearchResults(searchField.value);
-
   setTimeout(() => {
     showHideClearSearchButton();
   }, 100);
+});
+
+searchField.addEventListener('blur', () => {
+  searchResults.innerHTML = '';
 });
 
 clearSearchButton.addEventListener('click', () => {
