@@ -71,21 +71,34 @@
 
       .acronymInput {
         width: 100%;
-        max-width: 584px;
+        max-width: 562px;
         height: 40px;
         font-size: 30px;
         border-radius: 30px;
         padding: 10px;
-        border: 1px solid #999999;
+        border: 0;
+        color: #000;
+        background-color: #a6dbf0;
       }
 
-      .acronymInput:hover::-webkit-input-placeholder {
-        background-color: #00709c;
-        color: transparent;
+      .formWrapper {
+        border-radius: 30px;
+      }
+
+      .formWrapper:hover {
+        background-color: #a6dbf0;
+        border: 0;
+        color: #ffffff;
       }
 
       .acronymInput:focus::-webkit-input-placeholder {
-        color: transparent;
+        color: #333;
+        border: 0;
+      }
+
+      .acronymInput:hover {
+        color: #333;
+        border: 0;
       }
 
       .resultCard h1 {
@@ -105,7 +118,7 @@
         }
         100% {
           opacity: 1;
-          right: -543px;
+          right: -536px;
         }
       }
 
@@ -114,11 +127,12 @@
         height: 40px;
         position: relative;
         top: -51px;
-        right: -543px;
+        right: -536px;
         font-size: 29px;
         cursor: pointer;
-        color: #ffffff;
-        background-color: #318fb4;
+        color: #fff;
+        border: 1px solid #318fb4;
+        background-color: #00709c;
         border-radius: 50%;
       }
 
@@ -136,13 +150,12 @@
       </header>
 
       <div class="formContainer">
-        <div class="inputWrapper">
+        <div class="formWrapper">
           <form autocomplete="off">
             <input
               id="searchField"
               class="acronymInput"
               title="Search for an acronym"
-              placeholder="Search for an acronym..."
             />
           </form>
         </div>
