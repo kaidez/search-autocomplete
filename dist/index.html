@@ -57,25 +57,31 @@
 
       .container {
         text-align: center;
-        width: auto;
+        max-width: 584px;
         display: flex;
         flex-direction: column;
+        width: 100%;
+        margin: 0 auto;
       }
 
       .formContainer {
         margin: 0 auto;
         width: 100%;
-        max-width: 320px;
       }
 
       .acronymInput {
-        width: 300px;
+        width: 100%;
+        max-width: 584px;
         height: 40px;
-        max-width: 400px;
-        font-size: 20px;
-        border-radius: 10px;
+        font-size: 30px;
+        border-radius: 30px;
         padding: 10px;
         border: 1px solid #999999;
+      }
+
+      .acronymInput:hover::-webkit-input-placeholder {
+        background-color: #00709c;
+        color: transparent;
       }
 
       .acronymInput:focus::-webkit-input-placeholder {
@@ -95,26 +101,11 @@
       @keyframes fadeInButton {
         0% {
           opacity: 0;
-          right: -280px;
+          right: -548px;
         }
         100% {
           opacity: 1;
-          right: -275px;
-        }
-      }
-
-      .clearButtonFadeOut {
-        animation: fadeOutButton 0.5s;
-      }
-
-      @keyframes fadeOutButton {
-        0% {
-          opacity: 1;
-          right: -275px;
-        }
-        100% {
-          opacity: 0;
-          right: -280px;
+          right: -543px;
         }
       }
 
@@ -123,7 +114,7 @@
         height: 40px;
         position: relative;
         top: -51px;
-        right: -275px;
+        right: -543px;
         font-size: 29px;
         cursor: pointer;
         color: #ffffff;
@@ -145,20 +136,23 @@
       </header>
 
       <div class="formContainer">
-        <form autocomplete="off">
-          <input
-            id="searchField"
-            class="acronymInput"
-            placeholder="Enter an acronym..."
-          />
-        </form>
+        <div class="inputWrapper">
+          <form autocomplete="off">
+            <input
+              id="searchField"
+              class="acronymInput"
+              title="Search for an acronym"
+              placeholder="Search for an acronym..."
+            />
+          </form>
+        </div>
         <div id="clearSearchButton" class="clearButton clearButtonOpacity">
           &times;
         </div>
       </div>
 
       <section id="searchResults"></section>
-      <footer>100% wholly owned BlueCross BlueShield South Carolina</footer>
+      <footer>Wholly owned BlueCross BlueShield South Carolina</footer>
     </div>
     <!-- .container -->
   </body>
