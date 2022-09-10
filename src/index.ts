@@ -23,10 +23,6 @@ searchField.addEventListener('keyup', () => {
   }, 100);
 });
 
-searchField.addEventListener('blur', () => {
-  searchResults.innerHTML = '';
-});
-
 clearSearchButton.addEventListener('click', () => {
   searchField.value = '';
   searchResults.innerHTML = '';
