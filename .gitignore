@@ -1,2 +1,4 @@
 node_modules
 out/
+
+src/tests/index.test.ts
