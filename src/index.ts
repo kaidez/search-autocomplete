@@ -8,11 +8,9 @@ export const clearSearchButton = document.querySelector(
 
 function showHideClearSearchButton() {
   if (searchResults.childNodes.length >= 1) {
-    clearSearchButton.classList.add('clearButtonFadeIn');
-    clearSearchButton.classList.remove('clearButtonOpacity');
+    clearSearchButton.style.opacity = '1';
   } else {
-    clearSearchButton.classList.remove('clearButtonFadeIn');
-    clearSearchButton.classList.add('clearButtonOpacity');
+    clearSearchButton.style.opacity = '0';
   }
 }
 
@@ -26,6 +24,5 @@ searchField.addEventListener('keyup', () => {
 clearSearchButton.addEventListener('click', () => {
   searchField.value = '';
   searchResults.innerHTML = '';
-  clearSearchButton.classList.remove('clearButtonFadeIn');
-  clearSearchButton.classList.add('clearButtonOpacity');
+  clearSearchButton.style.opacity = '0';
 });
