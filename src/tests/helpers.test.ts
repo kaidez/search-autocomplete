@@ -1,8 +1,12 @@
+/**
+ * @jest-environment jsdom
+ */
+
 import { buildList } from '../helpers';
 
 const testDataOne = [{ age: 21 }, { name: 'joe' }];
 const testDataTwo = [
-  { age: 21, name: 'joe' },
+  { age: 21, name: 'joe', city: 'NYC' },
   { age: 15, name: 'jill' },
 ];
 
