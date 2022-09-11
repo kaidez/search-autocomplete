@@ -16,27 +16,26 @@
 
       /* Flex container */
       section {
-        width: 300px;
+        width: 100%;
+        max-width: 562px;
         height: 100%;
-        max-width: 1300px;
         margin: 0 auto;
         display: flex;
-        column-gap: 10px;
         flex-wrap: wrap;
-        flex-direction: row;
-        flex: 0 0 240px;
+        column-gap: 10px;
       }
 
       /* Flex item */
       article {
-        width: 300px;
-        height: 100px;
-        margin-bottom: 10px;
+        width: 500px;
+        height: 80px;
+        margin: 0 10px 10px;
         padding: 10px;
         text-align: left;
         font-size: 16px;
         border: 1px solid #00709c;
         border-radius: 10px;
+        flex: 33%;
       }
 
       h1 {
@@ -57,9 +56,7 @@
 
       .container {
         text-align: center;
-        max-width: 584px;
-        display: flex;
-        flex-direction: column;
+        max-width: 608px;
         width: 100%;
         margin: 0 auto;
       }
@@ -86,8 +83,10 @@
       }
 
       .resultCard h1 {
+        width: 100%;
+        max-width: 562px;
         margin: 0;
-        font-size: 30px;
+        font-size: 25px;
       }
 
       /* Start button styles */
@@ -124,6 +123,12 @@
         opacity: 0;
       }
       /* End button styles */
+
+      @media (max-width: 800px) {
+        article {
+          flex: 100%;
+        }
+      }
     </style>
     <script src="bundle.js" defer></script>
   </head>
