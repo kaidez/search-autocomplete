@@ -2,6 +2,7 @@
   "compilerOptions": {
     "suppressImplicitAnyIndexErrors": true,
     "strictNullChecks": true,
-    "outDir": "out"
+    "outDir": "out",
+    "esModuleInterop": true
   }
 }
