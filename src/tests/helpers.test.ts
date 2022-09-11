@@ -1,7 +1,3 @@
-/**
- * @jest-environment jsdom
- */
-
 import { buildList } from '../helpers';
 
 const testDataOne = [{ age: 21 }, { name: 'joe' }];
