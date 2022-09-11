@@ -49,9 +49,9 @@
       }
 
       form {
-        display: flex;
-        flex-wrap: wrap;
         margin: 0 10px;
+        font-size: 28px;
+        font-style: italic;
       }
 
       footer {
@@ -75,24 +75,26 @@
 
       .formContainer {
         margin: 60px auto 0;
-        width: 100%;
+        /* width: 100%; */
       }
 
       .acronymInput {
-        width: 100%;
-        max-width: 562px;
-        height: 40px;
-        font-size: 30px;
+        display: inline-block;
+        width: 25%;
+        height: 20px;
+        font-size: 22px;
         border-radius: 30px;
-        padding: 10px 10px 10px 29px;
+        padding: 10px 10px 10px 12px;
         border: 0;
         color: #000;
         background-color: #a6dbf0;
-        flex: 100%;
       }
 
       .formWrapper {
-        border-radius: 30px;
+        width: 470px;
+        margin: 0 auto;
+        text-align: center;
+        color: #005172;
       }
 
       .resultCard h1 {
@@ -119,18 +121,17 @@
       }
 
       .clearButton {
-        width: 40px;
-        height: 40px;
+        width: 24px;
+        height: 24px;
         position: relative;
-        top: -51px;
+        top: -32px;
+        right: 154px;
         margin-left: auto;
         margin-right: 6px;
-        order: 2;
-        font-size: 29px;
+        font-size: 18px;
         cursor: pointer;
         color: #fff;
-        border: 1px solid #318fb4;
-        background-color: #00709c;
+        background-color: #5694ac;
         border-radius: 50%;
         opacity: 0;
       }
@@ -159,11 +160,11 @@
       <div class="formContainer">
         <div class="formWrapper">
           <form autocomplete="off">
-            <input
+            What does <input
               id="searchField"
               class="acronymInput"
               title="Search for an acronym"
-            />
+            /> stand for?
             <div id="clearSearchButton" class="clearButton" title="Clear searches">
               &times;
             </div>
