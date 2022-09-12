@@ -6,6 +6,11 @@ export const searchResults = document.querySelector(
 
 const searchTermInObject = 'name';
 
+/**
+ *
+ * @param enteredSearchTerm
+ * @returns  [] or 'acronymsNameList.filter()'
+ */
 export async function showAcronymSearchResults(enteredSearchTerm: string) {
   const acronymsFullList = await fetchData('./acronyms.json');
   const acronymsNameList = buildList(acronymsFullList, searchTermInObject);
