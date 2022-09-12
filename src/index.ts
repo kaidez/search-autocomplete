@@ -7,7 +7,7 @@ export const clearSearchButton = document.querySelector(
 ) as HTMLDivElement;
 
 function showHideClearSearchButton() {
-  if (searchResults.childNodes.length >= 1) {
+  if (searchResults.childNodes.length >= 1 || searchField.value != '') {
     clearSearchButton.style.opacity = '1';
     clearSearchButton.style.cursor = 'pointer';
   } else {
@@ -25,6 +25,7 @@ searchField.addEventListener('keyup', () => {
 
 clearSearchButton.addEventListener('click', () => {
   searchField.value = '';
+  searchField.focus();
   searchResults.innerHTML = '';
   clearSearchButton.style.opacity = '0';
   clearSearchButton.style.cursor = 'none';
