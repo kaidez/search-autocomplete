@@ -9,8 +9,10 @@ export const clearSearchButton = document.querySelector(
 function showHideClearSearchButton() {
   if (searchResults.childNodes.length >= 1) {
     clearSearchButton.style.opacity = '1';
+    clearSearchButton.style.cursor = 'pointer';
   } else {
     clearSearchButton.style.opacity = '0';
+    clearSearchButton.style.cursor = 'none';
   }
 }
 
@@ -25,4 +27,5 @@ clearSearchButton.addEventListener('click', () => {
   searchField.value = '';
   searchResults.innerHTML = '';
   clearSearchButton.style.opacity = '0';
+  clearSearchButton.style.cursor = 'none';
 });
