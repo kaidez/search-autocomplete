@@ -79,18 +79,27 @@
 
       .acronymInput {
         display: inline-block;
-        width: 25%;
+        width: 34%;
         height: 20px;
-        font-size: 22px;
-        border-radius: 30px;
-        padding: 10px 10px 10px 12px;
+        font-size: 28px;
+        font-style: italic;
+        padding: 10px 4px 10px 5px;
         border: 0;
-        color: #000;
-        background-color: #a6dbf0;
+        color: #005172;
+        border-bottom: 1px solid #000;
+      }
+
+      .acronymInput:focus::-webkit-input-placeholder {
+        outline: none;
+        
+      }
+
+      .acronymInput:focus {
+        outline: none;
       }
 
       .formWrapper {
-        width: 470px;
+        width: 520px;
         margin: 0 auto;
         text-align: center;
         color: #005172;
@@ -162,6 +171,8 @@
               id="searchField"
               class="acronymInput"
               title="Search for an acronym"
+              placeholder="your acronym"
+              autofocus
             /> stand for?
             <div id="clearSearchButton" class="clearButton" title="Clear searches">
               &times;
