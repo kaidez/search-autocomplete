@@ -8,19 +8,19 @@ const testDataTwo = [
 
 describe('helpers.ts tests', () => {
   describe('buildList()', () => {
-    test('returns an array with one string', () => {
+    it('returns an array with one string', () => {
       expect(buildList(testDataOne, 'name')).toStrictEqual(['joe']);
     });
 
-    test('returns an array with two strings', () => {
+    it('returns an array with two strings', () => {
       expect(buildList(testDataTwo, 'name')).toStrictEqual(['joe', 'jill']);
     });
 
-    test('returns an array with one number', () => {
+    it('returns an array with one number', () => {
       expect(buildList(testDataOne, 'age')).toStrictEqual([21]);
     });
 
-    test('returns an array with two numbers', () => {
+    it('returns an array with two numbers', () => {
       expect(buildList(testDataTwo, 'age')).toStrictEqual([21, 15]);
     });
   });

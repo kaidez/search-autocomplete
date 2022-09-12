@@ -6,7 +6,7 @@ export const clearSearchButton = document.querySelector(
   '#clearSearchButton'
 ) as HTMLDivElement;
 
-function showHideClearSearchButton() {
+export function showHideClearSearchButton() {
   if (searchResults.childNodes.length >= 1 || searchField.value != '') {
     clearSearchButton.style.opacity = '1';
     clearSearchButton.style.cursor = 'pointer';

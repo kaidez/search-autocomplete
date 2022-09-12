@@ -1,10 +1,10 @@
 /**
  * @jest-environment jsdom
  */
-// import { showHideClearSearchButton } from '../index';
+import { showHideClearSearchButton } from '../index';
 
 describe('Search Field Clear button', () => {
-  test('should have its style property be "opacity: 0; cursor: none;"', () => {
+  it('should have a style property of "opacity: 0; cursor: none;"', () => {
     document.body.innerHTML = `<div id="clearSearchButton" class="clearButton" title="Clear searches" style="opacity: 1; cursor: pointer;">×</div><input id="searchField" class="acronymInput" title="Search for an acronym" placeholder="your acronym" autofocus=""><section id="searchResults"><article>foo</article></section>`;
 
     require('../index.ts');
