@@ -18,7 +18,8 @@ export async function fetchData(url: string) {
  * @param obj
  * @param objectProperty
  * @returns arr
- * Loop over an array of objects and if the 'objectProperty' is in one * of those objects, place it in a standard JS array
+ * Loop over an array of objects (obj) and if the 'objectProperty' is
+ * in one of those objects, place it in a standard JS array
  *
  * Ex: buildList([{'age': 21}, {'name': 'joe'}], 'age') returns [21]
  */
