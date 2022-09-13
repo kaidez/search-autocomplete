@@ -4,5 +4,7 @@
     "strictNullChecks": true,
     "outDir": "out",
     "esModuleInterop": true
-  }
+  },
+  "include": ["src/*.ts"],
+  "exclude": ["node_modules"]
 }
