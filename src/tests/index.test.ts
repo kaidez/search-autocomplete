@@ -1,7 +1,6 @@
 /**
  * @jest-environment jsdom
  */
-import { showHideClearSearchButton } from '../index';
 
 describe('Search Field Clear button', () => {
   it('should have a style property of "opacity: 0; cursor: none;"', () => {
