@@ -10,9 +10,11 @@ export function showHideClearSearchButton() {
   if (searchResults.childNodes.length >= 1 || searchField.value != '') {
     clearSearchButton.style.opacity = '1';
     clearSearchButton.style.cursor = 'pointer';
+    searchField.style.width = '240px';
   } else {
     clearSearchButton.style.opacity = '0';
     clearSearchButton.style.cursor = 'none';
+    searchField.style.width = '220px';
   }
 }
 
@@ -25,7 +27,7 @@ searchField.addEventListener('keyup', () => {
 
 clearSearchButton.addEventListener('click', () => {
   searchField.value = '';
-  searchField.focus();
+  searchField.style.width = '220px';
   searchResults.innerHTML = '';
   clearSearchButton.style.opacity = '0';
   clearSearchButton.style.cursor = 'none';
