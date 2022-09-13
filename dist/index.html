@@ -94,15 +94,13 @@
         border: 0;
         color: #005172;
         border-bottom: 1px solid #005172;
+        -webkit-transition: width 0.4s ease-in-out;
+        transition: width 0.4s ease-in-out;
       }
-
-      .acronymInput:focus::-webkit-input-placeholder {
-        outline: none;
-        
-      }
-
+ 
       .acronymInput:focus {
         outline: none;
+        width: 230px;
       }
 
       .formWrapper {
@@ -175,7 +173,7 @@
               class="acronymInput"
               title="Search for an acronym"
               placeholder="your acronym"
-              autofocus
+              type="text"
             /> stand for?
             <div id="clearSearchButton" class="clearButton" title="Clear searches" style="opacity: 0; cursor: none;">&times;</div>
           </form>
