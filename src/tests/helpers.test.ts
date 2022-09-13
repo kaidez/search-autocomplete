@@ -6,8 +6,8 @@ const testDataTwo = [
   { age: 15, name: 'jill' },
 ];
 
-describe('helpers.ts tests', () => {
-  describe('buildList()', () => {
+describe('helpers.ts --> tests', () => {
+  describe('buildList() method', () => {
     it('returns an array with one string', () => {
       expect(buildList(testDataOne, 'name')).toStrictEqual(['joe']);
     });
