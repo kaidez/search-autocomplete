@@ -94,12 +94,11 @@
         border: 0;
         color: #005172;
         border-bottom: 1px solid #005172;
-        transition: width 0.4s ease-in-out;
+        transition: width 0.2s ease-in-out;
       }
  
       .acronymInput:focus {
         outline: none;
-        /* width: 240px; */
       }
 
       .formWrapper {
@@ -124,11 +123,24 @@
       @keyframes fadeInButton {
         0% {
           opacity: 0;
-          right: -558px;
+          right: 198px;
         }
         100% {
           opacity: 1;
-          right: -552px;
+          right: 188px;
+        }
+      }
+
+      .clearButtonFadeOut {
+        animation: fadeOutButton 0.5s;
+      }
+
+      @keyframes fadeOutButton {
+        0% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
         }
       }
 
@@ -142,6 +154,7 @@
         font-size: 20px;
         font-weight: bold;
         color: #000;
+        opacity: 0;
       }
       /* End button styles */
 
@@ -174,7 +187,7 @@
               placeholder="your acronym"
               type="text"
             /> stand for?
-            <div id="clearSearchButton" class="clearButton" title="Clear searches" style="opacity: 0; cursor: none;">&times;</div>
+            <div id="clearSearchButton" class="clearButton" title="Clear searches" style="cursor: none;">&times;</div>
           </form>
         </div>
       </div>

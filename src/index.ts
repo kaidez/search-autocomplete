@@ -10,10 +10,14 @@ export function showHideClearSearchButton() {
   if (searchResults.childNodes.length >= 1 || searchField.value != '') {
     clearSearchButton.style.opacity = '1';
     clearSearchButton.style.cursor = 'pointer';
+    clearSearchButton.classList.add('clearButtonFadeIn');
+    clearSearchButton.classList.remove('clearButtonFadeOut');
     searchField.style.width = '240px';
   } else {
     clearSearchButton.style.opacity = '0';
     clearSearchButton.style.cursor = 'none';
+    clearSearchButton.classList.remove('clearButtonFadeIn');
+    clearSearchButton.classList.add('clearButtonFadeOut');
     searchField.style.width = '220px';
   }
 }
@@ -31,4 +35,6 @@ clearSearchButton.addEventListener('click', () => {
   searchResults.innerHTML = '';
   clearSearchButton.style.opacity = '0';
   clearSearchButton.style.cursor = 'none';
+  clearSearchButton.classList.remove('clearButtonFadeIn');
+  clearSearchButton.classList.add('clearButtonFadeOut');
 });
