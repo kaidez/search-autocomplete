@@ -6,7 +6,7 @@
   "scripts": {
     "start": "webpack serve --open",
     "build": "webpack watch",
-    "tswatch": "npx tsc -w",
+    "tswatch": "tsc --project tsconfig.build.json -w",
     "test": "jest"
   },
   "directories": {
