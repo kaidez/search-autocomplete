@@ -23,7 +23,7 @@ module.exports = {
       {
         loader: 'ts-loader',
         test: '/.(js|ts)$/',
-        exclude: [/node_modules/, 'src/tests'],
+        exclude: [/node_modules/, '/src/tests'],
       },
     ],
   },
