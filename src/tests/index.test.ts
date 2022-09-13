@@ -12,10 +12,6 @@ describe('Search Field Clear button', () => {
       '#clearSearchButton'
     ) as HTMLButtonElement;
 
-    const searchResults = document.querySelector(
-      '#searchResults'
-    ) as HTMLDivElement;
-
     clearSearchStart.click();
 
     const expectedFalseOpacityValue = '0';
