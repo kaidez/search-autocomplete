@@ -61,5 +61,9 @@
   {
     "name": "MG",
     "short_desc": "Major Group"
+  },
+  {
+    "name": "CMS",
+    "short_desc": "Centers For Medicare & Medicaid Services"
   }
 ]
