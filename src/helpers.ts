@@ -15,15 +15,19 @@ export async function fetchData(url: string) {
 
 /**
  *
- * @param obj
+ * @param arr
  * @param objectProperty
- * @returns newArray
- * Loop over an array of objects (arr) and if the 'objectProperty' is
- * in one of those objects, place it in a standard JS array
+ * @returns newArray (contains either strings or numbers)
+ *
+ * Loop over an array of objects ('arr') and if the 'objectProperty'
+ * is in one of those arrays, place it in an array called 'newArray'.
  *
  * Ex: buildList([{'age': 21}, {'name': 'joe'}], 'age') returns [21]
  */
-export const buildList = (arr: object[], objectProperty: string) => {
+export const buildList = (
+  arr: object[],
+  objectProperty: string
+): (string | number)[] => {
   let newArray: (string | number)[] = [];
   arr.map((objectArray: object[]) => {
     if (objectArray[objectProperty] !== undefined) {
