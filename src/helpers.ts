@@ -17,18 +17,18 @@ export async function fetchData(url: string) {
  *
  * @param obj
  * @param objectProperty
- * @returns arr
- * Loop over an array of objects (obj) and if the 'objectProperty' is
+ * @returns newArray
+ * Loop over an array of objects (arr) and if the 'objectProperty' is
  * in one of those objects, place it in a standard JS array
  *
  * Ex: buildList([{'age': 21}, {'name': 'joe'}], 'age') returns [21]
  */
-export const buildList = (obj: object[], objectProperty: string) => {
-  let arr: (string | number)[] = [];
-  obj.map((objectArray: object[]) => {
+export const buildList = (arr: object[], objectProperty: string) => {
+  let newArray: (string | number)[] = [];
+  arr.map((objectArray: object[]) => {
     if (objectArray[objectProperty] !== undefined) {
-      arr.push(objectArray[objectProperty]);
+      newArray.push(objectArray[objectProperty]);
     }
   });
-  return arr;
+  return newArray;
 };

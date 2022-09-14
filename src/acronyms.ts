@@ -9,7 +9,7 @@ const searchTermInObject = 'name';
 /**
  *
  * @param enteredSearchTerm
- * @returns  'acronymsNameList.filter()' as a string
+ * @returns 'acronymsNameList.filter()' as a string
  */
 export async function showAcronymSearchResults(enteredSearchTerm: string) {
   const acronymsFullList = await fetchData('./acronyms.json');
