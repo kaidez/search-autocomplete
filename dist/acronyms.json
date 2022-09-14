@@ -1,69 +1,108 @@
 [
   {
-    "age": 21
+    "name": "NBA",
+    "short_desc": "National Basketball League"
   },
   {
-    "name": "ITP",
-    "short_desc": "Interplan Teleprocessing System",
-    "age": 21
+    "name": "WNBA",
+    "short_desc": "Women's National Basketball League"
   },
   {
-    "name": "NA",
-    "short_desc": "National Alliance",
-    "age": 21
+    "name": "NHL",
+    "short_desc": "National Hockey League"
   },
   {
-    "name": "PHI",
-    "short_desc": "Personal Health Information",
-    "age": 21
-  },
-  {
-    "name": "MHTK",
-    "short_desc": "My Health Toolkit",
+    "name": "MLB",
+    "short_desc": "Major League Baseball",
     "city": "New York City"
   },
   {
-    "name": "MIM",
-    "short_desc": "My Insurance Manager",
+    "name": "EPL",
+    "short_desc": "English Premier League",
     "city": "New York City"
   },
   {
-    "name": "JAD",
-    "short_desc": "Joint Application Design"
+    "name": "NFL",
+    "short_desc": "National Football League"
   },
   {
-    "name": "EQE",
-    "short_desc": "Enterprise Quality Engineering"
+    "name": "EFL",
+    "short_desc": "English Football League Championship "
   },
   {
-    "name": "LEDS",
-    "short_desc": "Leveraged Enterprise Data Services"
+    "name": "CFL",
+    "short_desc": "Confederation of African Football"
   },
   {
-    "name": "ADAPT",
-    "short_desc": "Automated Development And Performance Testing"
+    "name": "FIFA",
+    "short_desc": "Fédération internationale de Football Association"
   },
   {
-    "name": "WMS",
-    "short_desc": "Work Management Systems"
+    "name": "FIBA",
+    "short_desc": "Fédération internationale de Basketball Association"
   },
   {
-    "name": "PGBA",
-    "short_desc": "Palmetto Government Benefits Administrators"
+    "name": "UEFA",
+    "short_desc": "Union of European Football Associations"
   },
   {
-    "name": "NCDPS",
-    "short_desc": "North Carolina Department Of Public Safety"
+    "name": "CONCACAF",
+    "short_desc": "Confederation of North, Central America and Caribbean Association Football"
   },
   {
-    "age": 50
+    "name": "PBA",
+    "short_desc": "Professional Bowlers Association"
   },
   {
-    "name": "MG",
-    "short_desc": "Major Group"
+    "name": "NSL",
+    "short_desc": "National Softball League"
   },
   {
-    "name": "CMS",
-    "short_desc": "Centers For Medicare & Medicaid Services"
+    "name": "MLE",
+    "short_desc": "Major League Eating"
+  },
+  {
+    "name": "IPL",
+    "short_desc": " Indian Premier League"
+  },
+  {
+    "name": "NPB",
+    "short_desc": "Nippon Professional Baseball"
+  },
+  {
+    "name": "AFL",
+    "short_desc": "Australian Football League"
+  },
+  {
+    "name": "SHL",
+    "short_desc": "Swedish Hockey League"
+  },
+  {
+    "name": "NHRA",
+    "short_desc": "National Hot Rod Association"
+  },
+  {
+    "name": "IHRA",
+    "short_desc": "International Hot Rod Association"
+  },
+  {
+    "name": "WBA",
+    "short_desc": "World Boxing Association"
+  },
+  {
+    "name": "WBC",
+    "short_desc": "World Boxing Council"
+  },
+  {
+    "name": "IBF",
+    "short_desc": "International Boxing Federation"
+  },
+  {
+    "name": "WBO",
+    "short_desc": "World Boxing Organization"
+  },
+  {
+    "name": "XFL",
+    "short_desc": "Xtreme Football League"
   }
 ]
