@@ -7,4 +7,4 @@ Tech requirements:
     node >= 8.1.2
     npm": ">=16.13.1
 
-All needed to install dependency packages and run a live server. But the most-recent version of Yarn should work without issues.
+Both are needed to install dependency packages and run a live server. But the most-recent version of Yarn should work without issues.
