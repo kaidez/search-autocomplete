@@ -102,7 +102,7 @@
         border-bottom: 1px solid #005172;
         transition: width 0.2s ease-in-out;
       }
- 
+
       .acronymInput:focus {
         outline: none;
       }
@@ -183,30 +183,34 @@
   <body>
     <div class="container">
       <header>
-        <h1>Tōjigo</h1> A Search Engine For Acronyms Used in BCBS
+        <h1>A Search Engine For Acronyms</h1>
       </header>
 
       <div class="formContainer">
         <div class="formWrapper">
           <form autocomplete="off">
-            What does <input
+            What does
+            <input
               id="searchField"
               class="acronymInput"
               title="Search for an acronym"
               placeholder="your acronym"
               type="text"
-            /> stand for?
-            <div id="clearSearchButton" class="clearButton" title="Clear searches" style="cursor: none;">&times;</div>
+            />
+            stand for?
+            <div
+              id="clearSearchButton"
+              class="clearButton"
+              title="Clear searches"
+              style="cursor: none"
+            >
+              &times;
+            </div>
           </form>
         </div>
       </div>
 
       <section id="searchResults"></section>
-      <footer>
-        <div class="footerText">
-          Tojigo is 100% owned by BlueCross BlueShield South Carolina
-        <div>
-      </footer>
     </div>
     <!-- .container -->
   </body>
