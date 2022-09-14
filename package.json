@@ -12,6 +12,10 @@
   "directories": {
     "test": "src/tests"
   },
+  "engines": {
+    "npm": ">=16.13.1",
+    "node": ">=8.1.2"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
