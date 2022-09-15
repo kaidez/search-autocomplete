@@ -9,7 +9,7 @@ Tech requirements:
 
 Both are needed to install dependency packages and run a live server. But the most-recent version of Yarn can _probably_ be substituted without issues.
 
-After installing the dependencies using `mpm install` or `yarn install`, running `npm start` runs the the site locally on `http://localhost:9000/` via webpack dev server.
+After installing the dependencies using `npm install` or `yarn install`, running `npm start` runs the the site locally on `http://localhost:9000/` via webpack dev server.
 
 Running `tswatch` watches changes to any of the `.ts` files under `src/` and outputs Typescript-formatted `.js` files to `out/`.
 
