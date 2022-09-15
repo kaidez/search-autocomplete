@@ -11,8 +11,8 @@ Both are needed to install dependency packages and run a live server. But the mo
 
 After installing the dependencies using `npm install` or `yarn install`, running `npm start` runs the the site locally on `http://localhost:9000/` via webpack dev server.
 
-Running `tswatch` watches changes to any of the `.ts` files under `src/` and outputs Typescript-formatted `.js` files to `out/`.
+Running `tswatch` watches changes to any of the Typescript `.ts` files under `src/`, and then outputs them as `.js` files to `out/`.
 
-Running `test` runs tests via Jest. The tests are DEFINITELY incomplete!!!!
+Running `test` runs tests via Jest. The tests are in `src/tests` and are DEFINITELY incomplete!!!!
 
 I wrote short notes about this at [http://www.kaidez.com/search-autocomplete](http://www.kaidez.com/search-autocomplete/).
